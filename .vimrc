@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 " Bundle 'Valloric/YouCompleteMe'
 " Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'jcf/vim-latex'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
