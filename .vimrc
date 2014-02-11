@@ -23,13 +23,10 @@ Bundle 'vim-pandoc/vim-pantondoc'
 Bundle 'vim-scripts/scratch.vim'
 
 set nocp
-call pathogen#infect()
 syntax on
 filetype on
 filetype plugin on
 filetype plugin indent on
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 colorscheme molokai
 
