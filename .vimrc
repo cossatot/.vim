@@ -9,7 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundle 'Valloric/YouCompleteMe'
-" Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jcf/vim-latex'
 Bundle 'altercation/vim-colors-solarized'
@@ -40,6 +40,10 @@ let g:vim_markdown_initial_foldlevel=1
 
 
 set colorcolumn=80
+
+" better split defaults
+set splitbelow
+set splitright
 
 map <c-j> <c-w>j
 map <c-k> <c-w>k
