@@ -20,7 +20,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'junegunn/goyo.vim'
 Bundle 'JuliaLang/julia-vim'
 Bundle 'vim-pandoc/vim-pantondoc'
-Bundle 'vim-scripts/scratch.vim'
+Bundle 'ethanmuller/scratch.vim'
 
 set nocp
 syntax on
