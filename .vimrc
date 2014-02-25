@@ -21,6 +21,9 @@ Bundle 'junegunn/goyo.vim'
 Bundle 'JuliaLang/julia-vim'
 Bundle 'vim-pandoc/vim-pantondoc'
 Bundle 'ethanmuller/scratch.vim'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+" Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
 
 set nocp
 syntax on
@@ -52,17 +55,11 @@ map <c-h> <c-w>h
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-nmap <leader>a <Esc>:Ack!
 
-let g:pyflakes_use_quickfix = 0
-let g:pep8_map='<leader>8'
-
-au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_on_dot = 0
+autocmd FileType python setlocal completeopt-=preview
 
 set statusline=%t       "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
