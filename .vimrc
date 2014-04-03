@@ -6,24 +6,24 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jcf/vim-latex'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
-Bundle 'plasticboy/vim-markdown'
-" Bundle 'suan/vim-instant-markdown'
-" Bundle 'amix/vim-zenroom2'
-Bundle 'junegunn/goyo.vim'
-Bundle 'JuliaLang/julia-vim'
-Bundle 'vim-pandoc/vim-pantondoc'
-Bundle 'ethanmuller/scratch.vim'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-" Bundle 'davidhalter/jedi-vim'
-Bundle 'ervandew/supertab'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jcf/vim-latex'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'suan/vim-instant-markdown'
+" Plugin 'amix/vim-zenroom2'
+" Plugin 'junegunn/goyo.vim'
+Plugin 'JuliaLang/julia-vim'
+" Plugin 'vim-pandoc/vim-pantondoc'
+Plugin 'ethanmuller/scratch.vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+" Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+Plugin 'plasticboy/vim-markdown'
 
 set nocp
 syntax on
@@ -43,6 +43,8 @@ let g:vim_markdown_initial_foldlevel=1
 
 
 set colorcolumn=80
+set lines=80
+set columns=81
 
 " better split defaults
 set splitbelow
