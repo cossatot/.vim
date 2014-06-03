@@ -43,8 +43,8 @@ let g:vim_markdown_initial_foldlevel=1
 
 
 set colorcolumn=80
-set lines=80
-set columns=81
+set lines=86
+set columns=85
 
 " better split defaults
 set splitbelow
@@ -101,7 +101,8 @@ func! WordProcessorMode()
   setlocal nolist
   setlocal guifont=Monaco:h12
   setlocal linespace=3
-  setlocal tw=79 
+  setlocal tw=79
+  setlocal nosmartindent
 endfu
 com! WP call WordProcessorMode()
 
