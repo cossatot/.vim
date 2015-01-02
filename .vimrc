@@ -1,12 +1,12 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
@@ -25,11 +25,11 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'ervandew/supertab'
 Plugin 'plasticboy/vim-markdown'
 
+call vundle#end()
+filetype plugin indent on
+
 set nocp
 syntax on
-filetype on
-filetype plugin on
-filetype plugin indent on
 
 colorscheme molokai
 
