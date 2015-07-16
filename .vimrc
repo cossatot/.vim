@@ -24,9 +24,15 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'hynek/vim-python-pep8-indent'
+ Plugin 'wlangstroth/vim-racket'
+Plugin 'luochen1990/rainbow'
+
 
 call vundle#end()
 filetype plugin indent on
+
+set noswapfile
 
 set nocp
 syntax on
@@ -36,10 +42,12 @@ colorscheme molokai
 set mouse=a
 
 set foldmethod=indent
-set foldlevel=99
+set foldlevelstart=99
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_initial_foldlevel=1
+
+let g:rainbow_active = 1
 
 
 set colorcolumn=80
@@ -79,12 +87,13 @@ set statusline+=%{fugitive#statusline()}
 set ruler
 set number
 
-set smartindent
+set cindent
 set expandtab
 set shiftwidth=4
 set tabstop=4
 
 au FileType python setl shiftwidth=4 tabstop=4 expandtab
+au FileType html setl shiftwidth=2 tabstop=2 expandtab
 
 " let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode *$'
 let g:Tex_CompileRule_pdf = 'pdflatex *$'
@@ -93,8 +102,8 @@ let g:Tex_CompileRule_pdf = 'pdflatex *$'
 func! WordProcessorMode()
   setlocal formatoptions=1
   setlocal noexpandtab
-  map j gj
-  map k gk
+"  map j gj
+"  map k gk
   setlocal spell spelllang=en_us
   setlocal wrap
   setlocal linebreak
