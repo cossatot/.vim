@@ -38,6 +38,8 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 " Plugin 'vim-airline/vim-airline'
 
+" nvim-qt stuff
+Plugin 'equalsraf/neovim-gui-shim'
 
 call vundle#end()
 filetype plugin indent on
@@ -61,6 +63,7 @@ let g:vim_markdown_initial_foldlevel=1
 
 let g:rainbow_active = 1
 
+" better collors in neovim
 set termguicolors
 
 
@@ -76,7 +79,8 @@ set splitright
 autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 
 " vim-pandoc-syntax stuff
-let g:pandoc#syntax#conceal#blacklist = ["newline","image","super","sub","strike","atx","codelang","abbrev","footnote","definition","li"]
+" let g:pandoc#syntax#conceal#blacklist = ["newline","image","super","sub","strike","atx","codelang","abbrev","footnote","definition","li"]
+let g:pandoc#syntax#conceal#use = 0
 autocmd FileType pandoc setlocal fo:want
 
 
