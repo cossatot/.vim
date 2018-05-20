@@ -37,6 +37,11 @@ Plugin 'Shougo/vimshell.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 " Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-obsession'
+Plugin 'jpalardy/vim-slime.git'
+
+Plugin 'dhruvasagar/vim-table-mode'
+
 
 " nvim-qt stuff
 Plugin 'equalsraf/neovim-gui-shim'
@@ -58,18 +63,20 @@ set foldlevelstart=99
 
 set noswapfile
 
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_initial_foldlevel=1
+" let g:vim_markdown_folding_disabled=1
+" let g:vim_markdown_initial_foldlevel=1
 
 let g:rainbow_active = 1
 
-" better collors in neovim
+" better colors in neovim
 set termguicolors
 
+" turn off highlighting after search
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 set colorcolumn=80
-set lines=86
-set columns=85
+" set lines=86
+" set columns=85
 
 " better split defaults
 set splitbelow
@@ -81,13 +88,31 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 " vim-pandoc-syntax stuff
 " let g:pandoc#syntax#conceal#blacklist = ["newline","image","super","sub","strike","atx","codelang","abbrev","footnote","definition","li"]
 let g:pandoc#syntax#conceal#use = 0
-autocmd FileType pandoc setlocal fo:want
+let g:pandoc#formatting#mode = 'ha'
+" autocmd FileType pandoc setlocal fo:want
+
+let g:pandoc#folding#fdc = 0
+
+" pollen lozenge character
+imap @@ ◊
 
 
+" auto-exponent
+imap <leader>- $^{-1}$
 
 let g:ale_linters = {
 \   'python': ['flake8'],
 \}
+
+
+" Vim-Slime config
+let g:slime_target = "tmux"
+
+
+" try to fix clipboard problems in tmux
+if $TMUX == ''
+    set clipboard+=unnamed
+end
 
 
 map <c-j> <c-w>j
@@ -134,6 +159,10 @@ endif
 au FileType python setl shiftwidth=4 tabstop=4 expandtab
 au FileType html setl shiftwidth=2 tabstop=2 expandtab " RainbowToggle
 au FileType markdown setl shiftwidth=2 tabstop=2 expandtab " RainbowToggle
+
+" pandoc markdown for pollen markdown files
+au BufRead,BufNewFile *.html.pmd set filetype=pandoc
+au BufRead,BufNewFile *.html.p set filetype=html
 
 " let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode *$'
 let g:Tex_CompileRule_pdf = 'pdflatex *$'
